@@ -167,7 +167,7 @@ treeHtml =
   #  <a href="#reply" class="hyp-write">Reply</a>
   # </div>
 
-@MyCtrl = ($scope) ->
+@BuckEt = ($scope) ->
 
   $scope.roots = {
 
