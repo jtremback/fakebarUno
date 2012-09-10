@@ -152,11 +152,19 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 }
 
 #gutter {
-  background: url('../images/noise_1.png');
-  background-attachment: fixed;
   height: 100%;
   margin-left: $heatmap-width + 10px;
   position: relative;
+}
+
+.wrapper {
+  background: url('../images/noise_1.png');
+  background-attachment: fixed;
+  height: 100%;
+  overflow: auto;
+  padding: 3em 1em 1em 1em;
+  width: 463px;
+  position: absolute;
 }
 
 #persona {
@@ -207,8 +215,4 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
   }
 }
 
-#wrapper {
-  height: 100%;
-  overflow: auto;
-  padding: 3em 1em 1em 1em;
-}
+

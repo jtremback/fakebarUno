@@ -30,7 +30,9 @@ Output
 "This is an e ->"
 ###
 
-#Templating for list
+#BUCKET VIEW
+
+#Templating for bucket
 app.directive 'bucket', ($compile) -> {
 
 restrict: 'E',
@@ -52,6 +54,7 @@ bucketHtml =
 </div>
   """
 
+
 #Templating for annotations
 app.directive 'anno', ($compile) -> {
 
@@ -65,46 +68,6 @@ link : (scope, elem, attrs) ->
   elem.append ($compile annoHtml) scope
 }
 
-# <ul class="annotator-widget annotator-listing">
-#   <li class="sidepanel">
-#     <div class="avablock">
-#       <img class="ava" src="images/{{node.avatar}}"/>
-#     </div>
-#   </li>
-#   <div class="papercontainer">
-#     <div class="metadata"><a>{{node.username}}</a> annotated:</div>
-#     <div class="control">
-#       <a class="goto"><div class="inner">To Annotation</div></a>
-#     </div>
-#     <li class="hyp-annotation hyp-paper hyp-detail hyp-excerpt" ng-click="showHide=!showHide">   
-#       <div class="page">
-#         <a href="{{node.link}}">{{node.page|truncate:60}}</a>
-#         <div class="domain">{{node.domain}}<img class="favicon" ng-src="http://{{node.domain}}/favicon.ico"/>
-#         </div>
-#       </div>
-#       <blockquote ng-show="node.srclevel" ng-hide="showHide">
-#         {{node.excerpt|truncate:140}}
-#       </blockquote>
-#       <blockquote ng-show="showHide">
-#         {{node.excerpt}}
-#       </blockquote>
-#       <div class="topbar">
-#         <div class="hyp-user">{{node.username}}</div>
-#         <div class="hyp-time">{{node.time}}</div>
-#       </div>    
-#       <div class="hyp-content" ng-hide="showHide">{{node.text|truncate:200}}</div>
-#       <div class="hyp-content" ng-show="showHide">{{node.text}}</div>
-#       <div class="hyp-thread">
-#         <ul class="annotator-listing" ng-show="showHide">
-
-#         <li tree="exp" class="hyp-annotation hyp-detail" ng-repeat="child in node.children" node="child" parent="node"></li>
-
-#         </ul>
-#       </div>
-#     </li>
-#   </div>
-# </ul>
-
 annoHtml =
   """
 <div class="topbar">
@@ -115,11 +78,6 @@ annoHtml =
 <div class="hyp-content">{{node.text}}</div>
 
   """
-
-  # <li class="rightsidepanel">
-  #   <div class="biggoto"></div>
-  #   <div class="label">To Annotation</div>
-  # </li>
 
 
 # Templating for replies tree
@@ -154,9 +112,92 @@ treeHtml =
 </div>
 
   """
-  # <div class="annotator-controls">
-  #  <a href="#reply" class="hyp-write">Reply</a>
-  # </div>
+
+
+#DETAIL VIEW
+
+#Templating for detail
+app.directive 'detail', ($compile) -> {
+
+restrict: 'E',
+scope: {
+  node: "="
+  parent: "="
+}
+
+link : (scope, elem, attrs) ->
+  elem.append ($compile bucketHtml) scope
+}
+
+bucketHtml =
+  """
+<div class="annotator-outer annotator-viewer">
+  <ul class="annotator-widget annotator-listing">
+      <li anno="exp" class="hyp-annotation hyp-summary hyp-paper" ng-repeat="child in node.children" node="child" parent="node"></div>
+  </ul>
+</div>
+  """
+
+
+#Templating for annotations
+app.directive 'anno', ($compile) -> {
+
+restrict: 'A',
+scope: {
+  node: "="
+  parent: "="
+}
+
+link : (scope, elem, attrs) ->
+  elem.append ($compile annoHtml) scope
+}
+
+annoHtml =
+  """
+<div class="topbar">
+  <div class="hyp-user">{{node.username}}</div>
+  <div class="hyp-time">{{node.time}}</div>
+</div>
+
+<div class="hyp-content">{{node.text}}</div>
+
+  """
+
+
+# Templating for replies tree
+app.directive 'tree', ($compile) -> {
+
+  replace: true,
+  scope: {
+    node: "="
+    parent: "="
+  }
+
+  link : (scope, elem, attrs) ->
+    elem.append ($compile treeHtml) scope
+}
+
+treeHtml =
+  """
+<a class="hyp-threadexp" href="#collapse"></a>
+<div class="topbar">
+  <div class="hyp-user">{{node.username}}</div>
+  <di  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;v class="hyp-time">{{node.time}}</div>
+</div>
+<div class="hyp-content">{{node.text}}</div>
+<div class="hyp-thread">
+  <ul class="annotator-listing"> 
+
+      <li tree="exp" class="hyp-annotation hyp-detail" ng-repeat="child in node.children" node="child" parent="node"></li>
+
+  </ul>
+</div>
+
+  """
+
+
 
 @BuckEt = ($scope) ->
 
