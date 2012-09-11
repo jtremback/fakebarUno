@@ -116,8 +116,7 @@ treeHtml =
 @MasterList = ($scope) ->
 
   $scope.root = {
-
-    name : "Bucket"
+    
     children : [ 
       {
         username: "xXbRiAnSgIrLXx",
