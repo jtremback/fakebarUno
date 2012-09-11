@@ -7,7 +7,7 @@
 @import 'base';
 @import 'common';
 
-$font-size: 16;
+$font-size: 14;
 $em: $font-size / 1em;
 
 body {
@@ -163,7 +163,6 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
   height: 100%;
   overflow: auto;
   padding: 3em 1em 1em 1em;
-  width: 463px;
   position: absolute;
 }
 
@@ -216,3 +215,25 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 }
 
 
+//FAKEADJUSTMENTS
+
+.annotator-heatmap {
+  position: absolute;
+}
+
+.hyp-heatmap-tab {
+  position: absolute;
+  left: -29px;
+
+  &.upper {
+    top: 55px;
+  }
+  &.lower {
+    bottom: 5px;
+  }
+}
+
+#wrapper2 {
+  left: 2em;
+  border-left: 1px solid $gray-lighter;
+}
