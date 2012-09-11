@@ -123,7 +123,25 @@ dviewHtml =
     <li class='hyp-paper hyp-excerpt'>
       <blockquote>{{node.excerpt}}</blockquote>
     </li>
-    <li detail="exp" class="hyp-annotation hyp-summary hyp-paper" ng-repeat="child in node.children" node="child" parent="node"></div>
+    <li class="hyp-annotation hyp-paper hyp-detail">
+
+      <a class='hyp-threadexp' href='#collapse'></a>
+      <div class='topbar'>
+        <div class='hyp-user'>woah</div>
+        <div class='hyp-time'>3 days ago</div>
+        <div class='annotator-controls'>
+          <a class='hyp-write' href='#reply'>Reply</a>
+        </div>
+      </div>
+      <div class='hyp-content'>thoughts</div>
+
+      <div class="hyp-thread">
+        <ul class="annotator-listing"
+          <li tree="exp" class="hyp-annotation hyp-detail" ng-repeat="child in node.children" node="child" parent="node"></li>
+        </ul>
+      </div>
+
+    </li>
   </ul>
 </div>
   """
@@ -244,7 +262,7 @@ treeHtml =
 @DetailList = ($scope) ->
 
   $scope.root = {
-    
+
     username: "xXbRiAnSgIrLXx",
     time: "about 3 days ago",
     excerpt: "Demonstrators seized bottles of liquor and wine from the offices along with cartons of cigarettes, items which Chinese officials frequently receive as bribes. A photograph posted on Sina Weibo, the main Chinese microblogging service, showed some of the items displayed outside the government building.",
