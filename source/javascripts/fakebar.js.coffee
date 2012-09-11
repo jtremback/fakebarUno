@@ -123,20 +123,17 @@ dviewHtml =
     <li class='hyp-paper hyp-excerpt'>
       <blockquote>{{node.excerpt}}</blockquote>
     </li>
+
     <li class="hyp-annotation hyp-paper hyp-detail">
 
-      <a class='hyp-threadexp' href='#collapse'></a>
-      <div class='topbar'>
-        <div class='hyp-user'>woah</div>
-        <div class='hyp-time'>3 days ago</div>
-        <div class='annotator-controls'>
-          <a class='hyp-write' href='#reply'>Reply</a>
-        </div>
+      <div class="topbar">
+        <div class="hyp-user">{{node.username}}</div>
+        <div class="hyp-time">{{node.time}}</div>
       </div>
-      <div class='hyp-content'>thoughts</div>
+      <div class='hyp-content'>{{node.text}}</div>
 
       <div class="hyp-thread">
-        <ul class="annotator-listing"
+        <ul class="annotator-listing">
           <li tree="exp" class="hyp-annotation hyp-detail" ng-repeat="child in node.children" node="child" parent="node"></li>
         </ul>
       </div>
@@ -145,32 +142,6 @@ dviewHtml =
   </ul>
 </div>
   """
-
-
-#Templating for summaries
-app.directive 'detail', ($compile) -> {
-
-restrict: 'A',
-scope: {
-  node: "="
-  parent: "="
-}
-
-link : (scope, elem, attrs) ->
-  elem.append ($compile detailHtml) scope
-}
-
-detailHtml =
-  """
-<div class="topbar">
-  <div class="hyp-user">{{node.username}}</div>
-  <div class="hyp-time">{{node.time}}</div>
-</div>
-
-<div class="hyp-content">{{node.text}}</div>
-
-  """
-
 
 # Templating for replies tree
 app.directive 'tree', ($compile) -> {
@@ -190,15 +161,12 @@ treeHtml =
 <a class="hyp-threadexp" href="#collapse"></a>
 <div class="topbar">
   <div class="hyp-user">{{node.username}}</div>
-  <di  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;v class="hyp-time">{{node.time}}</div>
+  <div class="hyp-time">{{node.time}}</div>
 </div>
 <div class="hyp-content">{{node.text}}</div>
 <div class="hyp-thread">
   <ul class="annotator-listing"> 
-
-      <li tree="exp" class="hyp-annotation hyp-detail" ng-repeat="child in node.children" node="child" parent="node"></li>
+    <li tree="exp" class="hyp-annotation hyp-detail" ng-repeat="child in node.children" node="child" parent="node"></li>
 
   </ul>
 </div>
