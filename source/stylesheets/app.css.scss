@@ -234,9 +234,14 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 }
 
 #wrapper2 {
-  left: 2em;
+  @include transition-property(left);
+  @include transition-duration(.5s);
   right: 0;
+  left: 35em;
   border-left: 1px solid $gray-lighter;
   overflow-x: hidden;
   overflow-y: scroll;
+  &.out {
+    left: 2em;
+  }
 }
