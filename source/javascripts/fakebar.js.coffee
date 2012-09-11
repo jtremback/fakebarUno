@@ -30,6 +30,16 @@ Output
 "This is an e ->"
 ###
 
+
+
+
+
+
+
+
+
+
+
 #BUCKET VIEW
 
 #Templating for bucket view
@@ -80,6 +90,17 @@ summHtml =
   """
 
 
+
+
+
+
+
+
+
+
+
+
+
 #DETAIL VIEW
 
 #Templating for detail view
@@ -99,7 +120,8 @@ dviewHtml =
   """
 <div class="annotator-outer annotator-viewer">
   <ul class="annotator-widget annotator-listing">
-      <li detail="exp" class="hyp-annotation hyp-summary hyp-paper" ng-repeat="child in node.children" node="child" parent="node"></div>
+    <div>smileyface</div>
+    <li detail="exp" class="hyp-annotation hyp-summary hyp-paper" ng-repeat="child in node.children" node="child" parent="node"></div>
   </ul>
 </div>
   """
@@ -162,6 +184,16 @@ treeHtml =
 </div>
 
   """
+
+
+
+
+
+
+
+
+
+#DATA LIST 
 
 @MasterList = ($scope) ->
 
