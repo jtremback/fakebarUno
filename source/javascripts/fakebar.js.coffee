@@ -49,14 +49,14 @@ bucketHtml =
   """
 <div class="annotator-outer annotator-viewer">
   <ul class="annotator-widget annotator-listing">
-      <li anno="exp" class="hyp-annotation hyp-summary hyp-paper" ng-repeat="child in node.children" node="child" parent="node"></div>
+      <li summary="exp" class="hyp-annotation hyp-summary hyp-paper" ng-repeat="child in node.children" node="child" parent="node"></div>
   </ul>
 </div>
   """
 
 
 #Templating for annotations
-app.directive 'anno', ($compile) -> {
+app.directive 'summary', ($compile) -> {
 
 restrict: 'A',
 scope: {
@@ -116,7 +116,7 @@ treeHtml =
 @MasterList = ($scope) ->
 
   $scope.root = {
-    
+
     children : [ 
       {
         username: "xXbRiAnSgIrLXx",
