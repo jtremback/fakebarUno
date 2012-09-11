@@ -242,7 +242,7 @@ label {
 
   &:before {
     color: rgba(150, 150, 150, .5);
-    content: "“";
+    content: "\201C";
     font-family: "PT Serif";
     font-size: 6em;
     position: absolute;
@@ -252,7 +252,7 @@ label {
 
   &:after {
     color: rgba(150, 150, 150, .5);
-    content: "„";
+    content: "\201E";
     font-family: "PT Serif";
     font-size: 5em;
     position: absolute;
