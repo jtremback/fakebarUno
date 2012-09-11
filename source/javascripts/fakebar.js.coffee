@@ -33,7 +33,7 @@ Output
 #BUCKET VIEW
 
 #Templating for bucket
-app.directive 'bucket', ($compile) -> {
+app.directive 'bview', ($compile) -> {
 
 restrict: 'E',
 scope: {
@@ -42,10 +42,10 @@ scope: {
 }
 
 link : (scope, elem, attrs) ->
-  elem.append ($compile bucketHtml) scope
+  elem.append ($compile bviewHtml) scope
 }
 
-bucketHtml =
+bviewHtml =
   """
 <div class="annotator-outer annotator-viewer">
   <ul class="annotator-widget annotator-listing">
@@ -55,7 +55,7 @@ bucketHtml =
   """
 
 
-#Templating for annotations
+#Templating for summaries
 app.directive 'summary', ($compile) -> {
 
 restrict: 'A',
@@ -65,10 +65,10 @@ scope: {
 }
 
 link : (scope, elem, attrs) ->
-  elem.append ($compile annoHtml) scope
+  elem.append ($compile summHtml) scope
 }
 
-annoHtml =
+summHtml =
   """
 <div class="topbar">
   <div class="hyp-user">{{node.username}}</div>
@@ -80,38 +80,88 @@ annoHtml =
   """
 
 
-# Templating for replies tree
-app.directive 'tree', ($compile) -> {
+# #DETAIL VIEW
 
-  replace: true,
-  scope: {
-    node: "="
-    parent: "="
-  }
+# #Templating for bucket
+# app.directive 'bucket', ($compile) -> {
 
-  link : (scope, elem, attrs) ->
-    elem.append ($compile treeHtml) scope
-}
+# restrict: 'E',
+# scope: {
+#   node: "="
+#   parent: "="
+# }
 
-treeHtml =
-  """
-<a class="hyp-threadexp" href="#collapse"></a>
-<div class="topbar">
-  <div class="hyp-user">{{node.username}}</div>
-  <di  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;v class="hyp-time">{{node.time}}</div>
-</div>
-<div class="hyp-content">{{node.text}}</div>
-<div class="hyp-thread">
-  <ul class="annotator-listing"> 
+# link : (scope, elem, attrs) ->
+#   elem.append ($compile bucketHtml) scope
+# }
 
-      <li tree="exp" class="hyp-annotation hyp-detail" ng-repeat="child in node.children" node="child" parent="node"></li>
+# bucketHtml =
+#   """
+# <div class="annotator-outer annotator-viewer">
+#   <ul class="annotator-widget annotator-listing">
+#       <li summary="exp" class="hyp-annotation hyp-summary hyp-paper" ng-repeat="child in node.children" node="child" parent="node"></div>
+#   </ul>
+# </div>
+#   """
 
-  </ul>
-</div>
 
-  """
+# #Templating for summaries
+# app.directive 'summary', ($compile) -> {
+
+# restrict: 'A',
+# scope: {
+#   node: "="
+#   parent: "="
+# }
+
+# link : (scope, elem, attrs) ->
+#   elem.append ($compile summHtml) scope
+# }
+
+# summHtml =
+#   """
+# <div class="topbar">
+#   <div class="hyp-user">{{node.username}}</div>
+#   <div class="hyp-time">{{node.time}}</div>
+# </div>
+
+# <div class="hyp-content">{{node.text}}</div>
+
+#   """
+
+
+# # Templating for replies tree
+# app.directive 'tree', ($compile) -> {
+
+#   replace: true,
+#   scope: {
+#     node: "="
+#     parent: "="
+#   }
+
+#   link : (scope, elem, attrs) ->
+#     elem.append ($compile treeHtml) scope
+# }
+
+# treeHtml =
+#   """
+# <a class="hyp-threadexp" href="#collapse"></a>
+# <div class="topbar">
+#   <div class="hyp-user">{{node.username}}</div>
+#   <di  background-repeat: no-repeat;
+#   background-position: center;
+#   background-size: 100% 100%;v class="hyp-time">{{node.time}}</div>
+# </div>
+# <div class="hyp-content">{{node.text}}</div>
+# <div class="hyp-thread">
+#   <ul class="annotator-listing"> 
+
+#       <li tree="exp" class="hyp-annotation hyp-detail" ng-repeat="child in node.children" node="child" parent="node"></li>
+
+#   </ul>
+# </div>
+
+#   """
 
 @MasterList = ($scope) ->
 
