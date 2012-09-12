@@ -240,16 +240,35 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
   }
 }
 
+#wrapper1 {
+  @include transition-property(padding-left);
+  @include transition-duration(.3s);
+  @include transition-timing-function(cubic-bezier(0.950, 0.050, 0.795, 0.035));
+  padding-right: 1em;
+  &.compressed {
+    padding-left: .5em;
+    padding-right: 1em;
+    // @include transition-property(padding-left);
+    // @include transition-duration(.3s);
+    // @include transition-timing-function(cubic-bezier(0.035, 0.795, 0.050, 0.950));
+
+  }
+}
+
 #wrapper2 {
+  @include transition-property(right);
   @include transition-property(left);
-  @include transition-duration(.5s);
+  @include transition-duration(.3s);
+  @include transition-timing-function(ease-out);
   right: 0;
+  // right: -36em;
   left: 35em;
   border-left: 1px solid $gray-lighter;
   @include box-shadow(0px -10px 9px -2px $gray);
   overflow-x: hidden;
   overflow-y: scroll;
   &.out {
-    left: 1.5em;
+    right: 0;
+    left: 1em;
   }
 }
