@@ -118,6 +118,7 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 }
 
 //HEATMAP TABS
+$tabscaler: 25.1px;
 .hyp-heatmap-tab {
   @include user-select(none);
   background-image: url("../images/side_tab.svg");
@@ -127,7 +128,7 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
   color: rgb(238, 238, 238);
   cursor: pointer;
   font-weight: bold;
-  font-size: .8em;
+  font-size: $tabscaler / 2.1;
   left: 2px;
   position: fixed;
   text-align: center;
@@ -138,20 +139,22 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 
 
   &.lower, &.upper {
-    height: 2.3em;
+    height: $tabscaler;
     margin-top: -1em;
 
   }
 
+  &.upper {
+    padding-top: $tabscaler / 3.5;
+    color: #FFEA00;
+    background-image: url("../images/up_tab.svg");
+  }
+
   &.lower {
-    padding-top: .3em;
+    padding-top: 30px;
     background-image: url("../images/down_tab.svg");
   }
 
-  &.upper {
-    padding-top: .5em;
-    background-image: url("../images/up_tab.svg");
-  }
 }
 
 #gutter {
@@ -256,15 +259,13 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
   @include transition-property(left);
   @include transition-duration(.3s);
   @include transition-timing-function(ease-out);
-  right: 0;
-  // right: -36em;
+  width: 414px;
   left: 35em;
   border-left: 1px solid $gray-lighter;
   @include box-shadow(0px -10px 9px -2px $gray);
   overflow-x: hidden;
   overflow-y: scroll;
   &.out {
-    right: 0;
     left: 1em;
   }
 }
