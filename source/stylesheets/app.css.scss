@@ -118,10 +118,9 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 }
 
 //HEATMAP TABS
-$tabscaler: 25.1px;
+$tabscaler: 28.1px;
 .hyp-heatmap-tab {
   @include user-select(none);
-  background-image: url("../images/side_tab.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -141,13 +140,15 @@ $tabscaler: 25.1px;
   &.lower, &.upper {
     height: $tabscaler;
     margin-top: -1em;
-
   }
 
-  &.upper {
-    padding-top: $tabscaler / 3.5;
-    color: #FFEA00;
-    background-image: url("../images/up_tab.svg");
+  &.upper.inline {
+    #label {
+      width: 100%;
+      position: absolute;
+      bottom: $tabscaler * .05;
+      color: #FFEA00;
+    }
   }
 
   &.lower {
