@@ -118,7 +118,6 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 }
 
 //HEATMAP TABS
-$tabscaler: 28.1px;
 .hyp-heatmap-tab {
   @include user-select(none);
   background-position: center center;
@@ -127,7 +126,7 @@ $tabscaler: 28.1px;
   color: rgb(238, 238, 238);
   cursor: pointer;
   font-weight: bold;
-  font-size: $tabscaler / 2.1;
+  font-size: 13.1px;
   left: 2px;
   position: fixed;
   text-align: center;
@@ -138,16 +137,44 @@ $tabscaler: 28.1px;
 
 
   &.lower, &.upper {
-    height: $tabscaler;
-    margin-top: -1em;
+    height: 26.1px;
+    #svg {
+      width: 100%;
+      height: 100%;
+    }
   }
 
-  &.upper.inline {
+//INSERT & TEXT COLOR VAR
+  // &.upper {
+  //   #label {
+  //     width: 100%;
+  //     position: absolute;
+  //     bottom: 1px;
+  //   }
+  //   &.emphasis {
+  //     #label {
+  //       color: #FFEA00;
+  //     }
+  //     #insert {
+  //       visibility: visible;
+  //     }
+  //   }
+  // }
+
+//DIFFERENT COLOR VAR
+  &.upper {
     #label {
       width: 100%;
       position: absolute;
-      bottom: $tabscaler * .05;
-      color: #FFEA00;
+      bottom: 1px;
+    }
+    &.emphasis {
+      color: #666;
+      text-shadow: none;
+      #tab {
+        fill: rgb(238, 238, 238);
+        stroke: #666;
+      }
     }
   }
 
