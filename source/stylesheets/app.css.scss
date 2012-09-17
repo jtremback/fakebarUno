@@ -174,7 +174,7 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 //FLIPPING ANIM ONE
   &.side.one {
     @include transition-property(transform, left);
-    @include transition-duration(.5s, .5s);
+    @include transition-duration(.5s, .2s);
     @include perspective(100px);
     left: -7px;
     height: 20.1px;
@@ -199,7 +199,6 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
       }
     }
     &:hover {
-      @include rotateY(30deg);
       left: -5px;
     }
   }
