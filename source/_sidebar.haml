@@ -39,75 +39,26 @@
         %feGaussianBlur{:stdDeviation => "0 2"}
     %rect{:fill => "url('#heatmap-gradient')", :filter => "url('#heatmap-blur')", :height => "100%", :width => "100%", :x => "0", :y => "0"}
 
-  .hyp-heatmap-tab.upper.emphasis1(style="top: 50px;")
-    #label 233
-    %svg{:id => "svg", :baseProfile => "full", :contentStyleType => "text/css", :preserveAspectRatio => "none", :version => "1.2", :viewBox => "0 0 100 100", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :zoomAndPan => "magnify"}
-      %polygon{:id => "tab", :fill => "#666", :points => "5.0,90.0 10.0,95.0 90.0,95.0 95.0,90.0 95.0,30.0 50.0,5.0 5.0,30.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => "1px", "vector-effect" => "non-scaling-stroke"}/
-      / %polygon{:id => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "88.0,30.0 50.0,10.0 12.0,30.0 ", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}/
-      %polygon{:id => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "95.0,35.0 50.0,10.0 5.0,35.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}/
+  .hyp-heatmap-tab.upper.emphasis(style="top: 50px;")
+    .label 233
+    %svg{:class => "svg", :baseProfile => "full", :contentStyleType => "text/css", :preserveAspectRatio => "none", :version => "1.2", :viewBox => "0 0 100 100", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :zoomAndPan => "magnify"}
+      %polygon{:class => "tab", :points => "5.0,90.0 10.0,95.0 90.0,95.0 95.0,90.0 95.0,30.0 50.0,5.0 5.0,30.0", "stroke-linejoin" => "bevel", "stroke-width" => "1px", "vector-effect" => "non-scaling-stroke"}/
+      %polygon{:class => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "95.0,35.0 50.0,10.0 5.0,35.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}/
 
-  
-  .hyp-heatmap-tab.upper.emphasis2(style="top: 80px;")
-    #label 233
-    %svg{:id => "svg", :baseProfile => "full", :contentStyleType => "text/css", :preserveAspectRatio => "none", :version => "1.2", :viewBox => "0 0 100 100", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :zoomAndPan => "magnify"}
-      %polygon{:id => "tab", :fill => "#666", :points => "5.0,90.0 10.0,95.0 90.0,95.0 95.0,90.0 95.0,30.0 50.0,5.0 5.0,30.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => "1px", "vector-effect" => "non-scaling-stroke"}/
-      / %polygon{:id => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "88.0,30.0 50.0,10.0 12.0,30.0 ", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}/
-      %polygon{:id => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "95.0,35.0 50.0,10.0 5.0,35.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}/
+  .hyp-heatmap-tab.side.one(style="top: 170px;")
+    .label 233
+    %svg{ :class => "svg", :baseProfile => "full", :contentScriptType => "text/ecmascript", :contentStyleType => "text/css", :preserveAspectRatio => "none", :version => "1.2", :viewBox => "0 0 100 100", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :zoomAndPan => "disable"}
+      %polygon{:class => "tab", :fill => "#666", :points => "20.0,95.0 5.0,50.0 20.0,5.0 90.0,5.0 95.0,15.0 95.0,85.0 90.0,95.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => "1px", "vector-effect" => "non-scaling-stroke"}
+      %polygon{:class => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "25.0,95.0 10.0,50.0 25.0,5.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}
 
-  
-  .hyp-heatmap-tab.upper.emphasis3(style="top: 110px;")
-    #label 233
-    %svg{:id => "svg", :baseProfile => "full", :contentStyleType => "text/css", :preserveAspectRatio => "none", :version => "1.2", :viewBox => "0 0 100 100", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :zoomAndPan => "magnify"}
-      %polygon{:id => "tab", :fill => "#666", :points => "5.0,90.0 10.0,95.0 90.0,95.0 95.0,90.0 95.0,30.0 50.0,5.0 5.0,30.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => "1px", "vector-effect" => "non-scaling-stroke"}/
-      / %polygon{:id => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "88.0,30.0 50.0,10.0 12.0,30.0 ", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}/
-      %polygon{:id => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "95.0,35.0 50.0,10.0 5.0,35.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}/
-
-  .hyp-heatmap-tab.upper.emphasis4(style="top: 140px;")
-    #label 233
-    %svg{:id => "svg", :baseProfile => "full", :contentStyleType => "text/css", :preserveAspectRatio => "none", :version => "1.2", :viewBox => "0 0 100 100", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :zoomAndPan => "magnify"}
-      %polygon{:id => "tab", :fill => "#666", :points => "5.0,90.0 10.0,95.0 90.0,95.0 95.0,90.0 95.0,30.0 50.0,5.0 5.0,30.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => "1px", "vector-effect" => "non-scaling-stroke"}/
-      / %polygon{:id => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "88.0,30.0 50.0,10.0 12.0,30.0 ", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}/
-      %polygon{:id => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "95.0,35.0 50.0,10.0 5.0,35.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}/
-
-  .hyp-heatmap-tab.side(style="top: 170px;")
-    #label 233
-    %svg{ :id => "svg", :baseProfile => "full", :contentScriptType => "text/ecmascript", :contentStyleType => "text/css", :preserveAspectRatio => "none", :version => "1.2", :viewBox => "0 0 100 100", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :zoomAndPan => "magnify"}
-      %polygon{:id => "tab", :fill => "#666", :points => "20.0,95.0 5.0,50.0 20.0,5.0 90.0,5.0 95.0,15.0 95.0,85.0 90.0,95.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => "1px", "vector-effect" => "non-scaling-stroke"}
-      %polygon{:id => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "25.0,95.0 10.0,50.0 25.0,5.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}
-
-  .hyp-heatmap-tab.side.emphasis1(style="top: 200px")
-    #label 233
-    %svg{ :id => "svg", :baseProfile => "full", :contentScriptType => "text/ecmascript", :contentStyleType => "text/css", :preserveAspectRatio => "none", :version => "1.2", :viewBox => "0 0 100 100", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :zoomAndPan => "magnify"}
-      %polygon{:id => "tab", :fill => "#666", :points => "20.0,95.0 5.0,50.0 20.0,5.0 90.0,5.0 95.0,15.0 95.0,85.0 90.0,95.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => "1px", "vector-effect" => "non-scaling-stroke"}
-      %polygon{:id => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "25.0,95.0 10.0,50.0 25.0,5.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}
-
-  .hyp-heatmap-tab.side.emphasis2(style="top: 230px")
-    #label 233
-    %svg{ :id => "svg", :baseProfile => "full", :contentScriptType => "text/ecmascript", :contentStyleType => "text/css", :preserveAspectRatio => "none", :version => "1.2", :viewBox => "0 0 100 100", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :zoomAndPan => "magnify"}
-      %polygon{:id => "tab", :fill => "#666", :points => "20.0,95.0 5.0,50.0 20.0,5.0 90.0,5.0 95.0,15.0 95.0,85.0 90.0,95.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => "1px", "vector-effect" => "non-scaling-stroke"}
-      %polygon{:id => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "25.0,95.0 10.0,50.0 25.0,5.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}
-
-  .hyp-heatmap-tab.side.emphasis3(style="top: 260px")
-    #label 233
-    %svg{ :id => "svg", :baseProfile => "full", :contentScriptType => "text/ecmascript", :contentStyleType => "text/css", :preserveAspectRatio => "none", :version => "1.2", :viewBox => "0 0 100 100", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :zoomAndPan => "magnify"}
-      %polygon{:id => "tab", :fill => "#666", :points => "20.0,95.0 5.0,50.0 20.0,5.0 90.0,5.0 95.0,15.0 95.0,85.0 90.0,95.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => "1px", "vector-effect" => "non-scaling-stroke"}
-      %polygon{:id => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "25.0,95.0 10.0,50.0 25.0,5.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}
-
-  .hyp-heatmap-tab.side.emphasis4(style="top: 290px")
-    #label 233
-    %svg{ :id => "svg", :baseProfile => "full", :contentScriptType => "text/ecmascript", :contentStyleType => "text/css", :preserveAspectRatio => "none", :version => "1.2", :viewBox => "0 0 100 100", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :zoomAndPan => "magnify"}
-      %polygon{:id => "tab", :fill => "#666", :points => "20.0,95.0 5.0,50.0 20.0,5.0 90.0,5.0 95.0,15.0 95.0,85.0 90.0,95.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => "1px", "vector-effect" => "non-scaling-stroke"}
-      %polygon{:id => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "25.0,95.0 10.0,50.0 25.0,5.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}
-
-  .hyp-heatmap-tab.side.large(style="top: 320px")
-    #label 233
-    %svg{ :id => "svg", :baseProfile => "full", :contentScriptType => "text/ecmascript", :contentStyleType => "text/css", :preserveAspectRatio => "none", :version => "1.2", :viewBox => "0 0 100 100", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :zoomAndPan => "magnify"}
-      %polygon{:id => "tab", :fill => "#666", :points => "20.0,95.0 5.0,50.0 20.0,5.0 90.0,5.0 95.0,15.0 95.0,85.0 90.0,95.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => "1px", "vector-effect" => "non-scaling-stroke"}
-      %polygon{:id => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "25.0,95.0 10.0,50.0 25.0,5.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}
+  .hyp-heatmap-tab.side.two(style="top: 230px;")
+    .label 322
+    %svg{ :class => "svg", :baseProfile => "full", :contentScriptType => "text/ecmascript", :contentStyleType => "text/css", :preserveAspectRatio => "none", :version => "1.2", :viewBox => "0 0 100 100", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :zoomAndPan => "disable"}
+      %polygon{:class => "tab", :fill => "#666", :points => "20.0,95.0 5.0,50.0 20.0,5.0 90.0,5.0 95.0,15.0 95.0,85.0 90.0,95.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => "1px", "vector-effect" => "non-scaling-stroke"}
+      %polygon{:class => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "25.0,95.0 10.0,50.0 25.0,5.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}
 
   .hyp-heatmap-tab.lower
-    #label 233
-    %svg{:id => "svg", :baseProfile => "full", :contentStyleType => "text/css", :preserveAspectRatio => "none", :version => "1.2", :viewBox => "0 0 100 100", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :zoomAndPan => "magnify"}
-      %polygon{:id => "tab", :fill => "#666", :points => "5.0,10.0 10.0,5.0 90.0,5.0 95.0,10.0 95.0,70.0 50.0,95.0 5.0,70.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => "1px", "vector-effect" => "non-scaling-stroke"}/
-      / %polygon{:id => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "88.0,30.0 50.0,10.0 12.0,30.0 ", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}/
-      %polygon{:id => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "95.0,65.0 50.0,90.0 5.0,65.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}/
+    .label 233
+    %svg{:class => "svg", :baseProfile => "full", :contentStyleType => "text/css", :preserveAspectRatio => "none", :version => "1.2", :viewBox => "0 0 100 100", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :zoomAndPan => "magnify"}
+      %polygon{:class => "tab", :fill => "#666", :points => "5.0,10.0 10.0,5.0 90.0,5.0 95.0,10.0 95.0,70.0 50.0,95.0 5.0,70.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => "1px", "vector-effect" => "non-scaling-stroke"}/
+      %polygon{:class => "insert", :visibility => "hidden", :fill => "#FFEA00", :points => "95.0,65.0 50.0,90.0 5.0,65.0", :stroke => "black", "stroke-linejoin" => "bevel", "stroke-width" => ".5px", "vector-effect" => "non-scaling-stroke"}/

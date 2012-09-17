@@ -10,11 +10,20 @@ $(document).ready(function(){
   $(document).click(function() {
     $("#wrapper2").removeClass("out");
     $("#wrapper1").removeClass("compressed");
+    $(".hyp-heatmap-tab").removeClass("flip");
   });
 
   $("#wrapper2").click(function(event) {
       alert('clicked inside');
       event.stopPropagation();
   });
+//FLIPPER
+  $(".hyp-heatmap-tab.side").click(function(){
+    event.stopPropagation();
+    $(this).addClass("flip");
+  });
 
 });
+
+
+
