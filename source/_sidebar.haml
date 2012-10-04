@@ -2,12 +2,12 @@
   #toolbar.shown{:style => "top: 0px;"}
     .tab
   #gutter
-    #wrapper1.wrapper(ng-controller="BucketList")
-      %ul.annotator-listing.annotator-widget
-        %li{"ng-include" => "'summary-template.html'", "ng-repeat" => "annotation in annotations"}
-    #wrapper2.wrapper
-      %div(ng-controller='DetailList')
-        %dview(node="root")
+    #wrapper1.wrapper(ng-controller="BucketList")  
+      .annotator-outer.annotator-viewer
+        %ul.annotator-listing.annotator-widget{"ng-include" => "'summary-template.html'", "ng-repeat" => "annotation in annotations"}
+    #wrapper2.wrapper(ng-controller="DetailList")
+      .annotator-outer.annotator-viewer
+        %ul.annotator-listing.annotator-widget{"ng-include" => "'detail-template.html'", "ng-repeat" => "annotation in annotations"}
 
 
   %svg.annotator-heatmap{:version => "1.1", :xmlns => "http://www.w3.org/2000/svg"}
