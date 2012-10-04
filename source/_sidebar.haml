@@ -2,9 +2,9 @@
   #toolbar.shown{:style => "top: 0px;"}
     .tab
   #gutter
-    #wrapper1.wrapper
-      %div(ng-controller='BucketList')
-        %bview(node="root")
+    #wrapper1.wrapper(ng-controller="BucketList")
+      %ul.annotator-listing.annotator-widget
+        %li{"ng-include" => "'summary-template.html'", "ng-repeat" => "annotation in annotations"}
     #wrapper2.wrapper
       %div(ng-controller='DetailList')
         %dview(node="root")
