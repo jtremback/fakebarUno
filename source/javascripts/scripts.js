@@ -13,6 +13,11 @@ $(document).ready(function(){
     event.stopPropagation();    
   });
 
+  $(".thispage").click(function(event){
+    $("#wrapper3").removeClass("shown");
+    event.stopPropagation();    
+  });
+
   $(document).click(function(event) {
     $("#wrapper2").removeClass("out");
     $("#wrapper1").removeClass("compressed");

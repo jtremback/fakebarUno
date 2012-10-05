@@ -36,7 +36,7 @@ function BucketList($scope) {
 function HistoryList($scope) {
   $scope.annotations = [
     {
-      username: "xXbRiAnSgIrLXx",
+      username: "WillardM_Romney",
       time: "about 3 days ago",
       page: "China cancels waste project after protests turn violent | Reuters",
       link: "http://www.reuters.com/article/2012/07/28/us-china-environment-protest-idUSBRE86R02Y20120728",
@@ -45,7 +45,7 @@ function HistoryList($scope) {
       text: "Chinese officials sound really easy to bribe."
     },
     {
-      username: "FutureFry",
+      username: "WillardM_Romney",
       time: "about 21 hours ago",
       page: "Microsoft Files Motion in Apple v. Samsung to Hide Patent License Agreement Terms ~pj",
       link: "http://groklaw.net/article.php?story=20120727084323510",
@@ -54,7 +54,7 @@ function HistoryList($scope) {
       text: "Seems to me that the article singles out Microsoft because it puts this motion in the context of Microsoft making secret patent deals with Android manufacturers:"
     },
     {
-      username: "brian_buggers",
+      username: "WillardM_Romney",
       time: "1 day ago",
       page: "How Microsoft Lost Its Mojo: Steve Ballmer and Corporate America’s Most Spectacular Decline | Business | Vanity Fair",
       link: "http://m.vanityfair.com/business/2012/08/microsoft-lost-mojo-steve-ballmer",
@@ -63,7 +63,7 @@ function HistoryList($scope) {
       text: "In other words, Apple is currently about where Microsoft was when they started paying dividends a little more than a decade ago...i.e. The point where they went from a growth company to a the sort of 'blue chip' held by index funds. The past decade has been spent securing their place in enterprise - their core market and one in which Apple, Google, and Facebook offer little competition. With loads of cash, a conucopia of brilliant personnel and Gates and Ballmer as the two largest shareholders, the whims of Wall Street bloggers don't have much effect."
     },
     {
-      username: "Mb'Skepteko",
+      username: "WillardM_Romney",
       time: "about 6 hours ago",
       page: "Japanese equestrian defies Father Time as the oldest competitor at London Olympics - Yahoo! Sports",
       link: "http://sports.yahoo.com/news/olympics--japanese-equestrian-defies-father-time-as-oldest-competitor-at-london-olympics.html",
@@ -72,7 +72,7 @@ function HistoryList($scope) {
       text: "The key to a long-lasting marriage"
     },
     {
-      username: "P1MP_$TEVE",
+      username: "WillardM_Romney",
       time: "about 1 hour ago",
       page: "German renewables output hits record high in H1 | Reuters",
       link: "http://www.reuters.com/article/2012/07/26/germany-renewables-idUSL6E8IQIA720120726",

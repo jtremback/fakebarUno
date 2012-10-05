@@ -7,7 +7,7 @@
 @import 'base';
 @import 'common';
 
-$font-size: 14;
+$font-size: 13;
 $em: $font-size / 1em;
 
 body {
@@ -247,7 +247,7 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
   background-attachment: fixed;
   height: 100%;
   overflow: auto;
-  padding: 3em 1em 1em 1em;
+  padding: 4em 1em 1em 1em;
   position: absolute;
 }
 
@@ -287,33 +287,54 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
   &.shown {
     .tri {
       @include icon("tri-right.png");
+      margin-right: .7em;
     }
   }
 
   .history {
-    float: right;
+    float: left;
     display: inline-block;
     height: 1.5em;
     margin-right: .3em;
     padding-left: .3em;
+    opacity: .5;
     a {
-      vertical-align: top;
+      vertical-align: bottom;
       @include linkbutton;
       background-image: url("../images/clock.png");
+      span {
+        vertical-align: bottom;
+        display: none;
+      }
     }
+    // &:hover {
+    //   span {
+    //     display: inline;
+    //   }
+    // }
   }
 
   .thispage {
-    float: right;
+    float: left;
     display: inline-block;
     height: 1.5em;
     margin-right: .3em;
     padding-left: .3em;
+    opacity: .5;
     a {
-      vertical-align: top;
+      vertical-align: bottom;
       @include linkbutton;
       background-image: url("../images/document.png");
+      span {
+        vertical-align: bottom;
+        display: none;
+      }
     }
+    // &:hover {
+    //   span {
+    //     display: inline;
+    //   }
+    // }
   }
 
   .tinyman {
@@ -323,6 +344,7 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
     margin-right: 1em;
     border-left: 1px solid $gray-lighter;
     padding-left: .3em;
+    opacity: .5;
     img {
       height: 98%;
       border-radius: 2px;
@@ -338,6 +360,7 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 .noiseknockout {
   @include pie-clearfix;
   background: url("../images/noise_1.png");
+  background-attachment: fixed;
   @include border-radius(.5em);
   @include inset-smallshadow(1px, 1px, .1);
   margin-bottom: .5em;
