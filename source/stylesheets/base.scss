@@ -1,5 +1,5 @@
 @import 'compass/css3';
-@import url(http://fonts.googleapis.com/css?family=Open+Sans|Merriweather|Source+Sans+Pro|PT+Serif);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600,400|Merriweather|Source+Sans+Pro|PT+Serif);
 
 
 // GRAYS
@@ -38,6 +38,10 @@ $gutter: 24;
 /* Shadow mixins */
 @mixin smallshadow($a: 2px, $b: 2px, $c: .1) {
   @include box-shadow($a $b 3px hsla(0, 0%, 0%, $c));
+}
+
+@mixin inset-smallshadow($a: 2px, $b: 2px, $c: .1) {
+  @include box-shadow(inset $a $b 3px hsla(0, 0%, 0%, $c));
 }
 
 @mixin plainform {
@@ -104,15 +108,32 @@ $gutter: 24;
 
 //ANNOTATOR TEXT STYLES
 @mixin primarytext {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.3em;
 }
 
 @mixin secondarytext {
   font-size: 1.1em;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 @mixin tertiarytext {
   font-size: .8em;
+}
+
+@mixin linkbutton {
+  text-decoration: none;
+  cursor: pointer;
+  padding-left: 1.3em;
+  background-size: 1em 1em;
+  background-repeat: no-repeat;
+  background-position: left center;
+  color: black;
+}
+
+@mixin linkbutton_right {
+  @include linkbutton;
+  background-position: right;
+  padding-left: 0;
+  padding-right: 1.3em;
 }

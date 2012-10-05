@@ -228,37 +228,39 @@ label {
 
 //EXCERPT
 .hyp-excerpt {
-  @include box-shadow(1px 3px 8px rgba(0, 0, 0, .2));
   position: relative;
-  margin: 1em 0;
-
+  margin-bottom: 1em;
   blockquote {
-    color: $gray;
-    font-family: "Merriweather";
-    font-size: 1.1em;
-    margin: 0;
-    padding: 0 1em;
+    margin-bottom: 0;
   }
+}
 
-  &:before {
-    color: rgba(150, 150, 150, .5);
-    content: "\201C";
-    font-family: "PT Serif";
-    font-size: 6em;
-    position: absolute;
-    top: -.2em;
-    left: -.15em;
-  }
+blockquote {
+  color: $gray;
+  font-family: "Merriweather";
+  font-size: 1em;
+  margin-bottom: 1em;
+  padding: 0 1em;
 
-  &:after {
-    color: rgba(150, 150, 150, .5);
-    content: "\201E";
-    font-family: "PT Serif";
-    font-size: 5em;
-    position: absolute;
-    right: -.15em;
-    bottom: -.1em;
-  }
+&:before {
+  color: rgba(150, 150, 150, .5);
+  content: "\201C";
+  font-family: "PT Serif";
+  font-size: 6em;
+  position: absolute;
+  top: -.2em;
+  left: -.15em;
+}
+
+// &:after {
+//   color: rgba(150, 150, 150, .5);
+//   content: "\201E";
+//   font-family: "PT Serif";
+//   font-size: 5em;
+//   position: absolute;
+//   right: -.15em;
+//   bottom: -.1em;
+// }
 }
 
 //TOPBAR
@@ -268,7 +270,7 @@ label {
   margin-bottom: .25em;
   .hyp-user {
     float: left;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: underline;
   }
   .hyp-time {
@@ -278,14 +280,6 @@ label {
   }
 }
 
-
-//COMMON CLASSES (TODO: put into a class common to all annotations)
-.hyp-content {
-  margin-bottom: .5em
-}
-.bottombar {
-  @include pie-clearfix;
-}
 
 //ANNOTATION DETAIL
 .hyp-detail {
@@ -345,18 +339,17 @@ label {
 
 //BUCKET VIEW REPLY SUMMARIES
 .hyp-summary {
-  @include smallshadow(2px, 3px, .2);
-  margin: 1em 0;
+  margin-bottom: 1em;
   position: relative;
   cursor: pointer;
 
   &:hover {
-    @include smallshadow(2px, 4px, .2);
+    @include smallshadow(2px, 2px, .1);
     bottom: 1px;
   }
 
   &:active {
-    @include smallshadow(2px, 1px, .2);
-    bottom: -2px;
+    @include smallshadow(2px, 1px, .1);
+    bottom: -0px;
   }
 }
