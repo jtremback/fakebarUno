@@ -291,50 +291,44 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
     }
   }
 
-  .history {
+  .toolbarItem {
     float: left;
     display: inline-block;
     height: 1.5em;
-    margin-right: .3em;
-    padding-left: .3em;
+    padding: 0 .3em;
     opacity: .5;
     a {
-      vertical-align: bottom;
       @include linkbutton;
-      background-image: url("../images/clock.png");
       span {
-        vertical-align: bottom;
         display: none;
       }
     }
-    // &:hover {
-    //   span {
-    //     display: inline;
-    //   }
-    // }
+    &:hover {
+      span {
+        display: inline;
+      }
+    }
+  }
+
+  .history {
+    @extend .toolbarItem;
+    a {
+      background-image: url("../images/clock.png");      
+    }
   }
 
   .thispage {
-    float: left;
-    display: inline-block;
-    height: 1.5em;
-    margin-right: .3em;
-    padding-left: .3em;
-    opacity: .5;
+    @extend .toolbarItem;
     a {
-      vertical-align: bottom;
-      @include linkbutton;
-      background-image: url("../images/document.png");
-      span {
-        vertical-align: bottom;
-        display: none;
-      }
+      background-image: url("../images/document.png");      
     }
-    // &:hover {
-    //   span {
-    //     display: inline;
-    //   }
-    // }
+  }
+
+  .search {
+    @extend .toolbarItem;
+    a {
+      background-image: url("../images/search.png");      
+    }
   }
 
   .tinyman {
